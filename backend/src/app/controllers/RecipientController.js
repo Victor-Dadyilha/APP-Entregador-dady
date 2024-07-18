@@ -19,8 +19,8 @@ class RecipientController {
         exclude: ['createdAt', 'updatedAt'],
       },
       order: [['id', 'DESC']],
-      limit,
-      offset: (page - 1) * limit,
+      limit: Number(limit), // Convertendo para número
+      offset: (page - 1) * Number(limit), // Convertendo para número
       include: [
         {
           model: Delivery,
@@ -37,9 +37,9 @@ class RecipientController {
     });
 
     return res.json({
-      limit,
+      limit: Number(limit), // Convertendo para número
       page: Number(page),
-      pages: Math.ceil(total / limit),
+      pages: Math.ceil(total / Number(limit)), // Convertendo para número
       total,
       items: recipients,
     });

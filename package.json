@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "mysql2": "^3.10.3"
+  },
+  "devDependencies": {
+    "reactotron-react-native": "^5.1.7"
   }
 }

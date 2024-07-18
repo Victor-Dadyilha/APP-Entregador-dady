@@ -31,9 +31,9 @@ class DeliverymanController {
     });
 
     return res.json({
-      limit,
+      limit: Number(limit), // Convertendo para número
       page: Number(page),
-      pages: Math.ceil(total / limit),
+      pages: Math.ceil(total / Number(limit)), // Convertendo para número
       total,
       items: deliverymen,
     });
