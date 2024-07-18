@@ -64,5 +64,3 @@ Existe um usuário administrador padrão: admin@fastfeet.com / 123456
 - 📛 **Sentry** - Plataforma para monitoramento de erros e notificação em tempo real.
 - 📷 **React-Native-Camera** - Biblioteca React Native para manusear a camera dentro do app mobile. 
 
-<hr>
-<p align="center"> com 💜 Luiz Gustavo </p>
