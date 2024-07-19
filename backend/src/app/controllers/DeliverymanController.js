@@ -1,6 +1,5 @@
 import * as Yup from 'yup';
 import { Op } from 'sequelize';
-
 import Deliveryman from '../models/Deliveryman';
 import File from '../models/File';
 
@@ -18,8 +17,8 @@ class DeliverymanController {
     const deliverymen = await Deliveryman.findAll({
       where,
       attributes: ['id', 'name', 'email'],
-      limit,
-      offset: (page - 1) * limit,
+      limit: Number(limit), // Convertendo para número
+      offset: (page - 1) * Number(limit), // Convertendo para número
       order: [['id', 'DESC']],
       include: [
         {
